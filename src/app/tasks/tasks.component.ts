@@ -1,15 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @Component({
   selector: 'app-tasks',
-  imports: [TaskComponent],
+  imports: [TaskComponent, NewTaskComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
 })
 export class TasksComponent {
   @Input({ required: true }) usrId!: string;
   @Input({ required: true }) name!: string;
+  isAddigTask = false;
   tasks = [
     {
       id: 't1',
@@ -42,5 +44,10 @@ export class TasksComponent {
 
   onCompleteTask(id: string) {
     this.tasks = this.tasks.filter((tsk) => tsk.id !== id);
+  }
+
+  onStartAddtask() {
+    this.isAddigTask = true;
+    console.log(`showNewForm switched to ${this.isAddigTask}`);
   }
 }
