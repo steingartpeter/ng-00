@@ -7,6 +7,7 @@ import {
   Output,
   output,
 } from '@angular/core';
+import { User } from './user.model';
 //import { DUMMY_USERS } from '../dummy-users';
 
 // TS => TYPE ALIAS:
@@ -16,11 +17,6 @@ import {
 //   name: string;
 // };
 // TS => INTERFACE:
-interface User {
-  id: string;
-  avatar: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-user',
