@@ -24,8 +24,6 @@ export class TasksComponent {
     return this.tasksService.getUserTasks(this.usrId);
   }
 
-  onCompleteTask(id: string) {}
-
   onStartAddtask() {
     this.isAddigTask = true;
     console.log(`showNewForm switched to ${this.isAddigTask}`);
@@ -33,10 +31,6 @@ export class TasksComponent {
 
   onCloseAddTask() {
     console.log('tasks.component => removeAddWndw()');
-    this.isAddigTask = false;
-  }
-
-  onAddTask(taskData: NewTaskData) {
     this.isAddigTask = false;
   }
 }

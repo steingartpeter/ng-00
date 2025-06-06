@@ -38,6 +38,7 @@ export class NewTaskComponent {
       },
       this.usrId
     );
+    console.log('submt done => removeNewWindow');
     this.close.emit();
   }
 }
