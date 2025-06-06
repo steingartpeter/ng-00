@@ -31,7 +31,7 @@ export class TasksComponent {
     console.log(`showNewForm switched to ${this.isAddigTask}`);
   }
 
-  onCancelAddTask() {
+  onCloseAddTask() {
     console.log('tasks.component => removeAddWndw()');
     this.isAddigTask = false;
   }
